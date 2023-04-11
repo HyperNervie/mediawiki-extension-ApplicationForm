@@ -1,0 +1,40 @@
+{
+	"name": "ApplicationForm",
+	"author": [],
+	"url": "https://www.mediawiki.org/wiki/Extension:ApplicationForm",
+	"descriptionmsg": "applicationform-desc",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.38.0"
+	},
+	"ConfigRegistry": {
+		"applicationform": "GlobalVarConfig::newInstance"
+	},
+	"SpecialPages": {},
+	"APIModules": {},
+	"MessagesDirs": {
+		"applicationform": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ApplicationFormAlias": "ApplicationForm.alias.php"
+	},
+	"AutoloadNamespaces": {
+		"ApplicationForm\\": "includes/"
+	},
+	"ResourceModules": {},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "ApplicationForm"
+	},
+	"Hooks": {
+		"SkinAfterPortlet": "ApplicationForm\\Hooks::onSkinAfterPortlet"
+	},
+	"config": {},
+	"DefaultUserOptions": {},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
+	"manifest_version": 2
+}
